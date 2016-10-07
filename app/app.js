@@ -36,3 +36,6 @@ angular.module('myApp', ['ngRoute', 'pascalprecht.translate'])
         $translate.use(key);
     };
 }])
+.controller('dateController', ['$scope', function($scope){
+  $scope.dates = ["dd.MM.y", "d.MM.y", "MMMM.dd.yyyy"];
+}])
