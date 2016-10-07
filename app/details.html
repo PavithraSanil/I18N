@@ -1,0 +1,13 @@
+
+
+<h1>News</h1>
+
+<button ng-click="changeLanguage('eng')">English</button>
+<button ng-click="changeLanguage('kannada')">Kannada</button>
+<p>Date = {{ today | date : "dd.MM.y"  }}</p>
+<ul>
+  <li>{{'news' | translate}}.......
+  {{'detail' | translate}}
+      <button class="btn pull-right" ng-class="{true: 'btn-primary', false: 'btn-danger'}[!patient.archived]" ng-click="patient.archived = !patient.archived">{{!patient.archived && 'mark as read' || 'mark as unread'}} </button>
+
+</ul>
