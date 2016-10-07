@@ -4,7 +4,11 @@
 
 <button ng-click="changeLanguage('eng')">English</button>
 <button ng-click="changeLanguage('kannada')">Kannada</button>
-<p>Date = {{ today | date : "dd.MM.y"  }}</p>
+<div ng-controller="dateController">
+  <select ng-model="selectedName" ng-options="x for x in dates" value="" >
+  </select>
+<p>{{today | date : selectedName}}</p>
+</div>
 <ul>
   <li>{{'news' | translate}}.......
   {{'detail' | translate}}
